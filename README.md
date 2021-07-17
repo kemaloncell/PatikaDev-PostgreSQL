@@ -1,8 +1,9 @@
 [Ödev1](#Ödev1)
 <a name="Ödev1"></a><br>
 [Ödev2](#Ödev2)
-<a name="Ödev2"></a>
-
+<a name="Ödev2"></a><br>
+[Ödev3](Ödev3)
+<a name="Ödev3"></a>
 
 
 # Ödev1
@@ -61,4 +62,37 @@ select first_name, last_name from actor where first_name in('Penelope','Nick','E
 ```sql
 select * from film
 where rental_rate in(0.99, 2.99, 4.99)and replacement_cost in (12.99, 15.99, 28.99)
+```
+-------------------------------------------------------------------------------------------
+
+
+# Ödev3
+
+* country tablosunda bulunan country sütunundaki ülke isimlerinden 'A' karakteri ile başlayıp 'a' karakteri ile sonlananları sıralayınız.
+
+```sql
+select * from country where country ~~* 'a%a';
+```
+
+* country tablosunda bulunan country sütunundaki ülke isimlerinden en az 6 karakterden oluşan ve sonu 'n' karakteri ile sonlananları sıralayınız.
+
+```sql
+select * from country where country ~~ '_____n';
+```
+
+*  Film tablosunda bulunan title sütunundaki film isimlerinden en az 4 adet büyük ya da küçük harf farketmesizin 'T' karakteri içeren film isimlerini sıralayınız.
+
+```sql
+select title from film where  
+title ~~* '%t%t%t%t%'
+```
+
+
+* film tablosunda bulunan tüm sütunlardaki verilerden title 'C' karakteri ile başlayan ve uzunluğu (length) 90 dan büyük olan ve rental_rate 2.99
+olan verileri sıralayınız.
+
+```sql
+select * from film where  
+title ~~ 'C%' and length>90 and rental_rate =2.99
+
 ```
