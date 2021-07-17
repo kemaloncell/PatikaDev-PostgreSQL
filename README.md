@@ -1,4 +1,4 @@
-[pookie](#Ödev1)
+[Ödev1](#Ödev1)
 <a name="Ödev1"></a>
 
 
