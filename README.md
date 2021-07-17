@@ -2,7 +2,7 @@
 <a name="Ödev1"></a><br>
 [Ödev2](#Ödev2)
 <a name="Ödev2"></a><br>
-[Ödev3](Ödev3)
+[Ödev3](#Ödev3)
 <a name="Ödev3"></a>
 
 
