@@ -3,8 +3,9 @@
 [Ödev2](#Ödev2)
 <a name="Ödev2"></a><br>
 [Ödev3](#Ödev3)
-<a name="Ödev3"></a>
-
+<a name="Ödev3"></a> <br>
+[Ödev4](#Ödev4)
+<a name="Ödev4"></a>
 
 # Ödev1
 
@@ -94,5 +95,44 @@ olan verileri sıralayınız.
 ```sql
 select * from film where  
 title ~~ 'C%' and length>90 and rental_rate =2.99
+
+```
+
+-------------------------------------------------------------------------------------------
+
+
+# Ödev4
+
+* film tablosunda bulunan replacement_cost sütununda bulunan birbirinden farklı değerleri sıralayınız.
+
+```sql
+select distinct replacement_cost from film 
+```
+
+* film tablosunda bulunan replacement_cost sütununda birbirinden farklı kaç tane veri vardır
+
+```sql
+select count (distinct replacement_cost) from film 
+```
+
+*  film tablosunda bulunan film isimlerinde (title) kaç tanesini T karakteri ile başlar ve aynı zamanda rating 'G' ye eşittir?
+
+```sql
+select title , rating from film  where title  like 'T%' and rating = 'G'
+```
+
+
+* country tablosunda bulunan ülke isimlerinden (country) kaç tanesi 5 karakterden oluşmaktadır?
+
+```sql
+select count(*) from country  where country like '_____' 
+
+```
+
+
+* city tablosundaki şehir isimlerinin kaçtanesi 'R' veya r karakteri ile biter?
+
+```sql
+select count(*) from city  where city Ilike '%r' 
 
 ```
