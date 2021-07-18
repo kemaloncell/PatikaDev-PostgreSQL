@@ -1,14 +1,17 @@
 [Ödev1](#Ödev1)
-<a name="Ödev1"></a><br>
+<a name="Ödev1">&nbsp;&nbsp;
 [Ödev2](#Ödev2)
-<a name="Ödev2"></a><br>
+<a name="Ödev2"></a>&nbsp;&nbsp;
 [Ödev3](#Ödev3)
-<a name="Ödev3"></a> <br>
+<a name="Ödev3"></a>&nbsp;&nbsp;
 [Ödev4](#Ödev4)
-<a name="Ödev4"></a><br>
+<a name="Ödev4"></a>&nbsp;&nbsp;
 [Ödev5](#Ödev5)
-<a name="Ödev5"></a>
-
+<a name="Ödev5"></a>&nbsp;&nbsp;
+[Ödev6](#Ödev6)
+<a name="Ödev6"></a>&nbsp;&nbsp;
+  
+  
 # Ödev1
 
 * film tablosunda bulunan title ve description sütunlarındaki verileri sıralayınız.
@@ -161,4 +164,34 @@ select title , length from film where title like '%n' order by length asc limit 
 ```sql
 select * from customer where store_id=1 order by last_name asc  limit 4
 ```
+
+  
+  # Ödev6
+
+* film tablosunda bulunan rental_rate sütunundaki değerlerin ortalaması nedir?
+
+```sql
+select avg(rental_rate) from film
+
+```
+
+* film tablosunda bulunan filmlerden kaçtanesi 'C' karekteri ile başlar?
+
+```sql
+select count(title) from film where title Ilike 'c%';
+```
+
+*  film tablosunda bulunan filmlerden rental_rate değeri 0.99 a eşit olan en uzun (length) film kaç dakikadır?
+
+```sql
+select max(length) from film where rental_rate= 0.99
+```
+  
+  *  film tablosunda bulunan filmlerin uzunluğu 150 dakikadan büyük olanlarına ait kaç farklı replacement_cost değeri vardır?
+
+```sql
+select  count(distinct replacement_cost) from film where length>150
+
+```
+  
 
