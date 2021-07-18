@@ -5,7 +5,9 @@
 [Ödev3](#Ödev3)
 <a name="Ödev3"></a> <br>
 [Ödev4](#Ödev4)
-<a name="Ödev4"></a>
+<a name="Ödev4"></a><br>
+[Ödev5](#Ödev5)
+<a name="Ödev5"></a>
 
 # Ödev1
 
@@ -136,3 +138,27 @@ select count(*) from country  where country like '_____'
 select count(*) from city  where city Ilike '%r' 
 
 ```
+
+-------------------------------------------------------------------------------------------
+
+
+# Ödev5
+
+* film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en uzun (length) 5 filmi sıralayınız.
+
+```sql
+select title , length from film where title like '%n' order by length desc limit 5
+```
+
+* film tablosunda bulunan ve film ismi (title) 'n' karakteri ile biten en kısa (length) ikinci 5 filmi sıralayınız.
+
+```sql
+select title , length from film where title like '%n' order by length asc limit 5
+```
+
+*  customer tablosunda bulunan last_name sütununa göre azalan yapılan sıralamada store_id 1 olmak koşuluyla ilk 4 veriyi sıralayınız.
+
+```sql
+select * from customer where store_id=1 order by last_name asc  limit 4
+```
+
