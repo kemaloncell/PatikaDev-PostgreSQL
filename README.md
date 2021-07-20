@@ -18,6 +18,8 @@
 <a name="Ödev9"></a>&nbsp;&nbsp;
 [Ödev10](#Ödev10)
 <a name="Ödev10"></a>&nbsp;&nbsp;
+[Ödev11](#Ödev11)
+<a name="Ödev11"></a>&nbsp;&nbsp;
   
   
 # Ödev1
@@ -373,6 +375,81 @@ select payment_id, first_name, last_name from customer right join payment on cus
 
 ```sql
 select rental_id, first_name, last_name from customer full join rental on customer.customer_id =rental.customer_id
+
+```
+  
+-------------------------------------------------------------------------------------------
+
+  
+  # Ödev11
+
+* actor ve customer tablolarında bulunan first_name sütunları için tüm verileri sıralayalım.
+
+```sql
+(
+	select first_name from actor 
+)
+union 
+(
+ 	select first_name from customer
+)
+```
+
+*  actor ve customer tablolarında bulunan first_name sütunları için kesişen verileri sıralayalım.
+
+```sql
+(
+	select first_name from actor 
+)
+intersect
+(
+ 	select first_name from customer
+)
+```
+ 
+  
+*  actor ve customer tablolarında bulunan first_name sütunları için ilk tabloda bulunan ancak ikinci tabloda bulunmayan verileri sıralayalım.
+
+```sql
+(
+	select first_name from actor 
+)
+except
+(
+ 	select first_name from customer
+)
+
+```
+  
+  *  İlk 3 sorguyu tekrar eden veriler için de yapalım.
+```sql
+(
+	select first_name from actor 
+)
+union all
+(
+ 	select first_name from customer
+)
+  
+  ```sql
+(
+	select first_name from actor 
+)
+intersect all
+(
+ 	select first_name from customer
+)
+
+```
+  
+  ```sql
+(
+	select first_name from actor 
+)
+except all
+(
+ 	select first_name from customer
+)
 
 ```
   
