@@ -430,8 +430,10 @@ union all
 (
  	select first_name from customer
 )
-  
-  ```sql
+ 
+```
+	
+ ``sql
 (
 	select first_name from actor 
 )
@@ -442,7 +444,7 @@ intersect all
 
 ```
   
-  ```sql
+ ```sql
 (
 	select first_name from actor 
 )
