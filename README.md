@@ -16,7 +16,7 @@
 <a name="Ödev8"></a>&nbsp;&nbsp;
 [Ödev9](#Ödev9)
 <a name="Ödev9"></a>&nbsp;&nbsp;
-[Ödev9](#Ödev10)
+[Ödev10](#Ödev10)
 <a name="Ödev10"></a>&nbsp;&nbsp;
   
   
